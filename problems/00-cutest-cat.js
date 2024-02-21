@@ -10,8 +10,8 @@ function cutestCat(cats) {
 
   while (i < cats.length) {
     const cat = cats[i];
-    if (cat > cutest) {
-      cutest = cat.cuteness;
+    if (cutest === undefined || cat.cuteness > cutest.cuteness) {
+      cutest = cat;
     }
     i++;
   }
@@ -20,10 +20,10 @@ function cutestCat(cats) {
 }
 
 const cats = [
-  { name: 'Fluffy', cuteness: 9 },
-  { name: 'Princess', cuteness: 6 },
-  { name: 'Tiger', cuteness: 7 },
-  { name: 'Indie', cuteness: 5 },
-]
-debugger
+  { name: "Fluffy", cuteness: 9 },
+  { name: "Princess", cuteness: 6 },
+  { name: "Tiger", cuteness: 7 },
+  { name: "Indie", cuteness: 5 },
+];
+debugger;
 console.log(cutestCat(cats)); // { name: 'Fluffy', cuteness: 9 }
